@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <SpriteKit/SpriteKit.h>
+#import "MainScene.h"
 
 @interface ViewController ()
 
@@ -15,13 +17,21 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+//    UIViewController * controller = [UIViewController new];
+//    [self addChildViewController:controller];
+//    [controller.view setFrame:CGRectMake(0, 0, 320, 50)];
+//    [controller.view setBackgroundColor:[UIColor redColor]];
+//    [self.view addSubview:controller.view];
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   
+    SKView * spriteKitView = [[SKView alloc] initWithFrame:self.view.frame];
+    [spriteKitView showsFPS];
+    [spriteKitView showsNodeCount];
+    self.view = spriteKitView;
+    
+    SKScene * spriteKitScene = [[MainScene alloc] initWithSize:self.view.bounds.size onController:self];
+    [spriteKitView presentScene:spriteKitScene];
+    
 }
 
 @end

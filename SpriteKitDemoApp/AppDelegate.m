@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Appodeal/Appodeal.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    {
+        NSString * apiKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"AppodealAppKey"];
+        [Appodeal setTestingEnabled:YES];
+        [Appodeal initializeWithApiKey:apiKey types:AppodealAdTypeAll];
+    }
+    
     return YES;
 }
 
