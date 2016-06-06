@@ -72,6 +72,8 @@
 		B92800531D055FAC00574EA4 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B92800521D055FAC00574EA4 /* libxml2.2.tbd */; };
 		B92800551D055FC400574EA4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B92800541D055FC400574EA4 /* libsqlite3.tbd */; };
 		B92800571D055FD300574EA4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B92800561D055FD300574EA4 /* libc++.tbd */; };
+		B928005B1D057E5500574EA4 /* NativeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B928005A1D057E5500574EA4 /* NativeScene.m */; };
+		B928005E1D05835300574EA4 /* BoxNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B928005D1D05835300574EA4 /* BoxNode.m */; };
 		B928FFFD1D055C2A00574EA4 /* Appodeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B928FFDC1D055C2A00574EA4 /* Appodeal.framework */; };
 		B928FFFE1D055C2A00574EA4 /* appodeal_adbadge.png in Resources */ = {isa = PBXBuildFile; fileRef = B928FFDE1D055C2A00574EA4 /* appodeal_adbadge.png */; };
 		B928FFFF1D055C2A00574EA4 /* appodeal_adbadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B928FFDF1D055C2A00574EA4 /* appodeal_adbadge@2x.png */; };
@@ -119,6 +121,10 @@
 		B92800521D055FAC00574EA4 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		B92800541D055FC400574EA4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B92800561D055FD300574EA4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B92800591D057E5500574EA4 /* NativeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeScene.h; sourceTree = "<group>"; };
+		B928005A1D057E5500574EA4 /* NativeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeScene.m; sourceTree = "<group>"; };
+		B928005C1D05835300574EA4 /* BoxNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxNode.h; sourceTree = "<group>"; };
+		B928005D1D05835300574EA4 /* BoxNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxNode.m; sourceTree = "<group>"; };
 		B928FFDC1D055C2A00574EA4 /* Appodeal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Appodeal.framework; sourceTree = "<group>"; };
 		B928FFDE1D055C2A00574EA4 /* appodeal_adbadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appodeal_adbadge.png; sourceTree = "<group>"; };
 		B928FFDF1D055C2A00574EA4 /* appodeal_adbadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appodeal_adbadge@2x.png"; sourceTree = "<group>"; };
@@ -219,6 +225,9 @@
 				B91292B21D01CDA000AB6B3A /* ViewController.m */,
 				B91292C41D01D40F00AB6B3A /* MainScene.h */,
 				B91292C51D01D40F00AB6B3A /* MainScene.m */,
+				B92800591D057E5500574EA4 /* NativeScene.h */,
+				B928005A1D057E5500574EA4 /* NativeScene.m */,
+				B928005F1D05835600574EA4 /* Native */,
 				B91292AB1D01CDA000AB6B3A /* Supporting Files */,
 			);
 			path = SpriteKitDemoApp;
@@ -273,6 +282,15 @@
 				B91292C21D01D01D00AB6B3A /* SpriteKit.framework */,
 			);
 			name = appFramework;
+			sourceTree = "<group>";
+		};
+		B928005F1D05835600574EA4 /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				B928005C1D05835300574EA4 /* BoxNode.h */,
+				B928005D1D05835300574EA4 /* BoxNode.m */,
+			);
+			name = Native;
 			sourceTree = "<group>";
 		};
 		B928FFDD1D055C2A00574EA4 /* Resources */ = {
@@ -417,7 +435,9 @@
 				B91292B31D01CDA000AB6B3A /* ViewController.m in Sources */,
 				B91292C61D01D40F00AB6B3A /* MainScene.m in Sources */,
 				B91292B01D01CDA000AB6B3A /* AppDelegate.m in Sources */,
+				B928005E1D05835300574EA4 /* BoxNode.m in Sources */,
 				B91292AD1D01CDA000AB6B3A /* main.m in Sources */,
+				B928005B1D057E5500574EA4 /* NativeScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

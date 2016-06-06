@@ -7,6 +7,7 @@
 //
 
 #import "MainScene.h"
+#import "NativeScene.h"
 #import <Appodeal/Appodeal.h>
 
 @interface MainScene ()<AppodealInterstitialDelegate, AppodealVideoDelegate, AppodealBannerViewDelegate, AppodealRewardedVideoDelegate>
@@ -152,7 +153,7 @@
     self.nativeLabel.position = (CGPoint){0, -CGRectGetHeight(self.nativeLabel.frame)/2};
     background.position = (CGPoint){CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame) - 120};
     
-    [self addChild:background];
+//    [self addChild:background];
 }
 
 #pragma mark --- EVENT
@@ -208,6 +209,9 @@
     if(CGRectContainsPoint(self.nativeLabel.frame, positionNatScene))
     {
         NSLog(@"native ads click");
+        SKTransition *reveal = [SKTransition fadeWithDuration:.5f];
+        NativeScene * nativeScene = [[NativeScene alloc] initWithSize:self.frame.size onController:self.controller];
+        [self.scene.view presentScene:nativeScene transition:reveal];
     }
 }
 
