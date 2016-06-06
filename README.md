@@ -1,3 +1,3 @@
 # appodeal-ios-spritekit-demo
 
-https://github.com/appodeal/appodeal-ios-demo/blob/master/README.md
+[![](https://img.shields.io/badge/integration-manual-blue.svg)](https://github.com/appodeal/appodeal-ios-demo/blob/master/README.md)
